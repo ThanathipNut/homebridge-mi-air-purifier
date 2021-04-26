@@ -61,8 +61,8 @@ MiAirPurifierProAirPurifierAccessory.prototype.getServices = function() {
 
     var infoService = new Service.AccessoryInformation();
     infoService
-        .setCharacteristic(Characteristic.Manufacturer, "XiaoMi")
-        .setCharacteristic(Characteristic.Model, "AirPurifierPro")
+        .setCharacteristic(Characteristic.Manufacturer, "Xiaomi")
+        .setCharacteristic(Characteristic.Model, "Mi Air Purifier Pro")
         .setCharacteristic(Characteristic.SerialNumber, "Undefined");
     services.push(infoService);
 
@@ -341,15 +341,15 @@ MiAirPurifierProAirPurifierAccessory.prototype.getServices = function() {
                 callback(null, result[0]);
                 
                 var airQualityValue = Characteristic.AirQuality.UNKNOWN;
-                if(result[0] <= 50) {
+                if(result[0] <= 15) {
                     airQualityValue = Characteristic.AirQuality.EXCELLENT;
-                } else if(result[0] > 50 && result[0] <= 100) {
+                } else if(result[0] > 15 && result[0] <= 35) {
                     airQualityValue = Characteristic.AirQuality.GOOD;
-                } else if(result[0] > 100 && result[0] <= 200) {
+                } else if(result[0] > 35 && result[0] <= 75) {
                     airQualityValue = Characteristic.AirQuality.FAIR;
-                } else if(result[0] > 200 && result[0] <= 300) {
+                } else if(result[0] > 75 && result[0] <= 115) {
                     airQualityValue = Characteristic.AirQuality.INFERIOR;
-                } else if(result[0] > 300) {
+                } else if(result[0] > 115) {
                     airQualityValue = Characteristic.AirQuality.POOR;
                 } else {
                     airQualityValue = Characteristic.AirQuality.UNKNOWN;
@@ -667,15 +667,15 @@ MiAirPurifierProAirQualityAccessory.prototype.getServices = function() {
                 
                 pm2_5Characteristic.updateValue(result[0]);
                 
-                if(result[0] <= 50) {
+                if(result[0] <= 15) {
                     callback(null, Characteristic.AirQuality.EXCELLENT);
-                } else if(result[0] > 50 && result[0] <= 100) {
+                } else if(result[0] > 15 && result[0] <= 35) {
                     callback(null, Characteristic.AirQuality.GOOD);
-                } else if(result[0] > 100 && result[0] <= 200) {
+                } else if(result[0] > 35 && result[0] <= 75) {
                     callback(null, Characteristic.AirQuality.FAIR);
-                } else if(result[0] > 200 && result[0] <= 300) {
+                } else if(result[0] > 75 && result[0] <= 115) {
                     callback(null, Characteristic.AirQuality.INFERIOR);
-                } else if(result[0] > 300) {
+                } else if(result[0] > 115) {
                     callback(null, Characteristic.AirQuality.POOR);
                 } else {
                     callback(null, Characteristic.AirQuality.UNKNOWN);

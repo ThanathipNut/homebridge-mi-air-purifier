@@ -61,11 +61,6 @@ function MiAirPurifierPlatform(log, config, api) {
         this.api = api;
     }
     
-    this.log.info("[MiAirPurifierPlatform][INFO]*******************************************************************");
-    this.log.info("[MiAirPurifierPlatform][INFO]          MiAirPurifierPlatform v%s By YinHang", packageFile.version);
-    this.log.info("[MiAirPurifierPlatform][INFO]  GitHub: https://github.com/YinHangCode/homebridge-mi-airpurifier ");
-    this.log.info("[MiAirPurifierPlatform][INFO]                                              QQ Group: 107927710  ");
-    this.log.info("[MiAirPurifierPlatform][INFO]*******************************************************************");
     this.log.info("[MiAirPurifierPlatform][INFO]start success...");
 }
 
