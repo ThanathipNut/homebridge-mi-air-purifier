@@ -1,3 +1,5 @@
+# (Only) Changed air quality levels (PM2.5)
+
 # homebridge-mi-airpurifier
 [![npm version](https://badge.fury.io/js/homebridge-mi-airpurifier.svg)](https://badge.fury.io/js/homebridge-mi-airpurifier)
 
