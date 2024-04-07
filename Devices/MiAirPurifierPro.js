@@ -403,7 +403,7 @@ MiAirPurifierProTemperatureAccessory.prototype.getServices = function() {
     infoService
         .setCharacteristic(Characteristic.Manufacturer, "Xiaomi")
         .setCharacteristic(Characteristic.Model, "Mi Air Purifier Pro")
-        .setCharacteristic(Characteristic.SerialNumber, this.device.address);
+        .setCharacteristic(Characteristic.SerialNumber, this.device.address + "-T");
     services.push(infoService);
     
     var temperatureService = new Service.TemperatureSensor(this.name);
@@ -439,7 +439,7 @@ MiAirPurifierProHumidityAccessory.prototype.getServices = function() {
     infoService
         .setCharacteristic(Characteristic.Manufacturer, "Xiaomi")
         .setCharacteristic(Characteristic.Model, "Mi Air Purifier Pro")
-        .setCharacteristic(Characteristic.SerialNumber, this.device.address);
+        .setCharacteristic(Characteristic.SerialNumber, this.device.address + "-H");
     services.push(infoService);
     
     var humidityService = new Service.HumiditySensor(this.name);
@@ -654,7 +654,7 @@ MiAirPurifierProAirQualityAccessory.prototype.getServices = function() {
     infoService
         .setCharacteristic(Characteristic.Manufacturer, "Xiaomi")
         .setCharacteristic(Characteristic.Model, "Mi Air Purifier Pro")
-        .setCharacteristic(Characteristic.SerialNumber, this.device.address);
+        .setCharacteristic(Characteristic.SerialNumber, this.device.address + "-AQ");
     services.push(infoService);
     
     var pmService = new Service.AirQualitySensor(this.name);

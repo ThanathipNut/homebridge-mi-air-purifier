@@ -495,7 +495,7 @@ MiAirPurifierAirQualityAccessory.prototype.getServices = function() {
     infoService
         .setCharacteristic(Characteristic.Manufacturer, "Xiaomi")
         .setCharacteristic(Characteristic.Model, "Mi Air Purifier")
-        .setCharacteristic(Characteristic.SerialNumber, this.device.address);
+        .setCharacteristic(Characteristic.SerialNumber, this.device.address + "-AQ");
     services.push(infoService);
     
     var pmService = new Service.AirQualitySensor(this.name);
