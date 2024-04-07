@@ -1,5 +1,5 @@
 # Forked from [YinHangCode/homebridge-mi-airpurifier](https://github.com/YinHangCode/homebridge-mi-airpurifier)
-- Changed air quality levels (PM2.5)
+- Changed air quality levels (PM2.5) according to WHO Indoor Air Quality Guidelines
 
 # homebridge-mi-airpurifier
 [![npm version](https://badge.fury.io/js/homebridge-mi-airpurifier.svg)](https://badge.fury.io/js/homebridge-mi-airpurifier)
