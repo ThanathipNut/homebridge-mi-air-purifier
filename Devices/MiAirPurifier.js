@@ -54,9 +54,9 @@ MiAirPurifierAirPurifierAccessory.prototype.getServices = function() {
 
     var infoService = new Service.AccessoryInformation();
     infoService
-        .setCharacteristic(Characteristic.Manufacturer, "XiaoMi")
-        .setCharacteristic(Characteristic.Model, "AirPurifier")
-        .setCharacteristic(Characteristic.SerialNumber, "Undefined");
+        .setCharacteristic(Characteristic.Manufacturer, "Xiaomi")
+        .setCharacteristic(Characteristic.Model, "Mi Air Purifier")
+        .setCharacteristic(Characteristic.SerialNumber, this.config['ip']);
     services.push(infoService);
 
     var silentModeSwitch = new Service.Switch(this.silentModeSwitchName);
@@ -391,9 +391,9 @@ MiAirPurifierBuzzerSwitchAccessory.prototype.getServices = function() {
 
     var infoService = new Service.AccessoryInformation();
     infoService
-        .setCharacteristic(Characteristic.Manufacturer, "XiaoMi")
-        .setCharacteristic(Characteristic.Model, "AirPurifier")
-        .setCharacteristic(Characteristic.SerialNumber, "Undefined");
+        .setCharacteristic(Characteristic.Manufacturer, "Xiaomi")
+        .setCharacteristic(Characteristic.Model, "Mi Air Purifier")
+        .setCharacteristic(Characteristic.SerialNumber, this.config['ip']);
     services.push(infoService);
     
     var switchService = new Service.Switch(this.name);
@@ -444,9 +444,9 @@ MiAirPurifierLEDBulbAccessory.prototype.getServices = function() {
 
     var infoService = new Service.AccessoryInformation();
     infoService
-        .setCharacteristic(Characteristic.Manufacturer, "XiaoMi")
-        .setCharacteristic(Characteristic.Model, "AirPurifier")
-        .setCharacteristic(Characteristic.SerialNumber, "Undefined");
+        .setCharacteristic(Characteristic.Manufacturer, "Xiaomi")
+        .setCharacteristic(Characteristic.Model, "Mi Air Purifier")
+        .setCharacteristic(Characteristic.SerialNumber, this.config['ip']);
     services.push(infoService);
     
     var switchLEDService = new Service.Lightbulb(this.name);
@@ -495,7 +495,7 @@ MiAirPurifierAirQualityAccessory.prototype.getServices = function() {
     infoService
         .setCharacteristic(Characteristic.Manufacturer, "Xiaomi")
         .setCharacteristic(Characteristic.Model, "Mi Air Purifier")
-        .setCharacteristic(Characteristic.SerialNumber, "Undefined");
+        .setCharacteristic(Characteristic.SerialNumber, this.config['ip']);
     services.push(infoService);
     
     var pmService = new Service.AirQualitySensor(this.name);
