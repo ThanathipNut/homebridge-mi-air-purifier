@@ -69,7 +69,6 @@ MiAirPurifierAirPurifierAccessory.prototype.getServices = function() {
     var activeCharacteristic = airPurifierService.getCharacteristic(Characteristic.Active);
     var currentAirPurifierStateCharacteristic = airPurifierService.getCharacteristic(Characteristic.CurrentAirPurifierState);
     var targetAirPurifierStateCharacteristic = airPurifierService.getCharacteristic(Characteristic.TargetAirPurifierState);
-//  var lockPhysicalControlsCharacteristic = airPurifierService.addCharacteristic(Characteristic.LockPhysicalControls);
     var rotationSpeedCharacteristic = airPurifierService.addCharacteristic(Characteristic.RotationSpeed);
     
     var pm25DensityCharacteristic = airPurifierService.addCharacteristic(Characteristic.PM2_5Density);
@@ -337,7 +336,6 @@ MiAirPurifierAirPurifierAccessory.prototype.getServices = function() {
             });
 	    }.bind(this));
 
-    // var filterMaintenanceService = new Service.FilterMaintenance(this.name);
     var filterChangeIndicationCharacteristic = airPurifierService.getCharacteristic(Characteristic.FilterChangeIndication);
     var filterLifeLevelCharacteristic = airPurifierService.addCharacteristic(Characteristic.FilterLifeLevel);
 
@@ -361,7 +359,6 @@ MiAirPurifierAirPurifierAccessory.prototype.getServices = function() {
                 callback(err);
             });
         }.bind(this));
-    // services.push(filterMaintenanceService);
 
     return services;
 }
